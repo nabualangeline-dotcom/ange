@@ -486,7 +486,7 @@ h1, h2, h3 {
    ======================================== */
 .projects-section {
     padding: 80px 0;
-    border-top: 1px solid var(--border, #eee);
+    background: #fdfbf7; /* Off-white / light cream background katulad ng nasa mockup */
 }
 
 .projects-container {
@@ -495,7 +495,7 @@ h1, h2, h3 {
 }
 
 .section-heading {
-    margin-bottom: 35px;
+    margin-bottom: 30px;
 }
 
 .section-heading span {
@@ -507,9 +507,10 @@ h1, h2, h3 {
 }
 
 .section-heading h2 {
-    font-size: 36px;
+    font-size: 38px;
     color: var(--text-dark, #222);
     margin-top: 5px;
+    font-family: serif;
 }
 
 .section-heading h2 strong {
@@ -519,127 +520,120 @@ h1, h2, h3 {
 .section-heading p {
     color: var(--text-muted, #777);
     font-size: 12px;
-    margin-top: 6px;
+    margin-top: 4px;
 }
 
-/* MAIN GRID LAYOUT (2 COLUMNS: KALIWA AT KANAN) */
+/* 2-COLUMN GRID SPLIT */
 .projects-layout {
     display: grid;
-    grid-template-columns: 1.1fr 0.9fr;
-    gap: 30px;
+    grid-template-columns: 1fr 1fr; /* Pantay o bahagyang 1.1fr 0.9fr */
+    gap: 40px;
     align-items: start;
 }
 
-/* ========================================
-   KALIWANG CARD (FEATURED WITH IMAGE)
-   ======================================== */
-.project-featured {
-    background: #ffffff;
-    border: 1px solid var(--border, #eee);
-    border-radius: 12px;
-    padding: 20px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+/* KALIWANG COLUMN */
+.project-featured-col {
     display: flex;
     flex-direction: column;
+    gap: 25px;
 }
 
-/* MALIIT NA PICTURE CONTAINER */
-.project-featured .project-image-wrapper {
+/* PICTURE BOX WITH ROUNDED CORNERS AND BORDER */
+.project-image-box {
     width: 100%;
-    max-height: 220px; /* Kontrolado ang taas para hindi masyadong malaki */
-    border-radius: 10px;
+    height: 230px;
+    border-radius: 20px; /* Rounded border style katulad ng mockup */
+    border: 1px solid #dcd1c4;
     overflow: hidden;
-    background: #f4f0e6;
-    margin-bottom: 20px;
+    background: #f4efe6;
+    padding: 10px; /* Inner spacing para sa card frame style */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.02);
 }
 
-.project-featured .project-image-wrapper img {
+.project-image-box img {
     width: 100%;
     height: 100%;
-    object-fit: cover; /* Siguradong pantay ang pag-crop ng larawan */
-    display: block;
-}
-
-.project-featured .project-content {
-    display: flex;
-    flex-direction: column;
-}
-
-/* ========================================
-   KANANG CARDS (SIDE PROJECTS - TEXT ONLY)
-   ======================================== */
-.projects-side {
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-}
-
-.project-text-only {
-    background: #ffffff;
-    border: 1px solid var(--border, #eee);
+    object-fit: cover;
     border-radius: 12px;
-    padding: 25px;
-    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.03);
+}
+
+/* CARD BOX STYLING (PINKISH/CREAM TONE CONTAINER) */
+.project-card {
+    background: #f8ebe6; /* Subtle pinkish/peach tint base sa mockup */
+    border: 1px solid #ebd3cb;
+    border-radius: 6px;
+    padding: 22px;
+}
+
+/* KANANG COLUMN STRUCTURE */
+.projects-side-col {
     display: flex;
-    gap: 16px;
-    align-items: flex-start;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    flex-direction: column;
+    justify-content: space-between;
+    min-height: 100%;
 }
 
-.project-text-only:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.06);
-}
-
-/* MALIIT NA ICON BOX SA KANANG CARDS */
-.project-icon-box {
-    width: 42px;
-    height: 42px;
-    min-width: 42px;
-    background: var(--peach, #fff8f5);
-    border: 1px solid rgba(198, 166, 100, 0.2);
-    border-radius: 8px;
+.side-cards-wrapper {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    color: var(--gold-dark, #a3823e);
-    font-size: 16px;
+    flex-direction: column;
+    gap: 25px;
 }
 
-/* TYPOGRAPHY & TAGS */
+/* TYPOGRAPHY */
 .project-tag {
     font-size: 10px;
     font-weight: 700;
     letter-spacing: 1px;
     color: var(--gold-dark, #a3823e);
     text-transform: uppercase;
-    display: inline-block;
+    display: block;
     margin-bottom: 6px;
 }
 
-.project-content h3 {
+.project-card h3 {
     font-size: 17px;
     color: var(--text-dark, #222);
+    font-family: serif;
     margin-bottom: 4px;
 }
 
-.project-content h4 {
-    font-size: 12px;
-    color: var(--text-dark, #444);
+.project-card h4 {
+    font-size: 11px;
+    color: #444;
     font-weight: 600;
-    margin-bottom: 8px;
+    margin-bottom: 10px;
 }
 
-.project-content p {
+.project-card p {
     font-size: 11.5px;
-    color: var(--text-muted, #666);
+    color: #666;
     line-height: 1.6;
 }
 
-/* ========================================
-   RESPONSIVE (MOBILE VIEW)
-   ======================================== */
-@media (max-width: 850px) {
+/* HOBBIES LINK SA KANANG IBABA */
+.next-section-link {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 40px;
+}
+
+.next-section-link a {
+    background: #c6a664; /* Gold/brown background button */
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 4px;
+    font-size: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    transition: background 0.3s ease;
+}
+
+.next-section-link a:hover {
+    background: #a3823e;
+}
+
+/* RESPONSIVE */
+@media (max-width: 800px) {
     .projects-layout {
         grid-template-columns: 1fr;
     }
