@@ -595,7 +595,7 @@ h1, h2, h3 {
     box-shadow: 0 8px 15px rgba(0,0,0,0.05);
 }
 
-hobby-card img {
+.hobby-card img {
     position: absolute;
     inset: 0;
     width: 100%;
@@ -636,7 +636,8 @@ hobby-card img {
     color: var(--gold);
     margin-bottom: 12px;
 }
-hobby-overlay h3 {
+
+.hobby-overlay h3 {
     margin-top: 12px;
     font-size: 15px;
     color: var(--text-dark);
