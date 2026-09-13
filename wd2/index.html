@@ -377,7 +377,7 @@
     </section>
 
 
-    <!-- ========================================
+<!-- ========================================
      PROJECTS SECTION
      ======================================== -->
 <section class="section projects-section" id="projects">
@@ -393,13 +393,14 @@
         <!-- MAIN LAYOUT WRAPPER (2 COLUMNS) -->
         <div class="projects-layout">
 
-            <!-- KALIWA: FEATURED PROJECT (IMAGE + DESCRIPTION BELOW) -->
-            <article class="project-card project-featured">
-                <div class="project-image-wrapper">
+            <!-- KALIWA: FEATURED PROJECT (PIC SA TAAS, TEXT BOX SA BABA) -->
+            <div class="project-featured-col">
+                <div class="project-image-box">
                     <img src="ecosmart-garden.png" alt="EcoSmart Garden Arduino Project">
                 </div>
-                <div class="project-content">
-                    <span class="project-tag">Arduino & IoT</span>
+                
+                <article class="project-card">
+                    <span class="project-tag">ARDUINO & IOT</span>
                     <h3>EcoSmart Garden</h3>
                     <h4>Arduino-Based Automated Irrigation System</h4>
                     <p>
@@ -407,41 +408,38 @@
                         It uses Arduino, a soil moisture sensor, DHT11, RTC, relay, water pump, LCD, and other components 
                         to support scheduled and moisture-based irrigation.
                     </p>
-                </div>
-            </article>
+                </article>
+            </div>
 
-            <!-- KANAN: SIDE PROJECTS (TEXT ONLY WITH ICONS) -->
-            <div class="projects-side">
-
-                <!-- Project 2 (Text Only) -->
-                <article class="project-card project-text-only">
-                    <div class="project-icon-box">
-                        <i class="fas fa-laptop-code"></i>
-                    </div>
-                    <div class="project-content">
-                        <span class="project-tag">Web Development</span>
+            <!-- KANAN: SIDE PROJECTS + LINK SA BABA -->
+            <div class="projects-side-col">
+                
+                <div class="side-cards-wrapper">
+                    <!-- Project 2 -->
+                    <article class="project-card">
+                        <span class="project-tag">WEB DEVELOPMENT</span>
                         <h3>Echo Study Tech</h3>
                         <p>
                             An educational e-commerce website created using HTML and CSS, featuring digital study 
                             products and a simple shopping cart concept.
                         </p>
-                    </div>
-                </article>
+                    </article>
 
-                <!-- Project 3 (Text Only) -->
-                <article class="project-card project-text-only">
-                    <div class="project-icon-box">
-                        <i class="fas fa-code"></i>
-                    </div>
-                    <div class="project-content">
-                        <span class="project-tag">C Programming</span>
+                    <!-- Project 3 -->
+                    <article class="project-card">
+                        <span class="project-tag">PROGRAMMING</span>
                         <h3>C Programming Activities</h3>
                         <p>
                             A collection of programming exercises involving loops, arrays, functions, and basic 
                             problem-solving using the C programming language.
                         </p>
-                    </div>
-                </article>
+                    </article>
+                </div>
+
+                <!-- LINK SA KANANG IBABA -->
+                <div class="next-section-link">
+                    <a href="#hobbies">My hobbies &rarr;</a>
+                </div>
 
             </div>
 
