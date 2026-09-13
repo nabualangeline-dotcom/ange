@@ -464,7 +464,6 @@ h1, h2, h3 {
 }
 
 .feature-overlay {
-    .feature-overlay {
     position: absolute;
     inset: 0;
     background: linear-gradient(to top, rgba(0, 0, 0, 0.85) 0%, rgba(0, 0, 0, 0.25) 60%, transparent 100%);
