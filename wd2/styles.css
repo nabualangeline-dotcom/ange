@@ -884,65 +884,46 @@ h1, h2, h3 {
 }
 
 /* ========================================
-   FOOTER
+   FOOTER (Clean White Style)
    ======================================== */
 .footer {
     padding: 25px 0;
-    background: #ffffff;
-    color: #888888;
-    font-size: 12px;
-    border-top: 1px solid var(--border, #eee);
+    background: #ffffff; /* Puti ang background para katulad sa unang pic */
+    color: #666666;
+    font-size: 13px;
+    border-top: 1px solid rgba(0, 0, 0, 0.08); /* Manipis na nahahating linya sa taas */
+    width: 100%;
 }
 
 .footer-container {
-    width: min(var(--max-width, 1100px), calc(100% - 40px));
-    margin: auto;
+    width: min(1100px, calc(100% - 40px));
+    margin: 0 auto;
     display: flex;
     align-items: center;
     justify-content: space-between;
 }
 
+.footer p {
+    margin: 0;
+    color: #777777;
+}
+
 .footer .social-links {
     display: flex;
     gap: 16px;
-    font-size: 15px;
+    align-items: center;
 }
 
 .footer .social-links a {
     color: #888888;
-    transition: color 0.2s;
+    font-size: 16px;
+    transition: color 0.2s ease, transform 0.2s ease;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 .footer .social-links a:hover {
-    color: #222222;
-}
-
-/* ========================================
-   RESPONSIVE DESIGN
-   ======================================== */
-@media (max-width: 800px) {
-    .skills-container,
-    .projects-layout,
-    .contact-container {
-        grid-template-columns: 1fr;
-        gap: 40px;
-    }
-
-    .hobbies-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .skills-feature {
-        min-height: 300px;
-    }
-
-    .contact-text h2 {
-        font-size: 30px;
-    }
-
-    .footer-container {
-        flex-direction: column;
-        gap: 15px;
-        text-align: center;
-    }
+    color: #a3823e; /* Mag-o-gold kapag itinutok ang cursor */
+    transform: translateY(-2px);
 }
